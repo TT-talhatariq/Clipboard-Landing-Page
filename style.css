@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;700&display=swap");
+
+:root {
+  --font-size: 18px;
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grey-blue: hsl(210, 10%, 33%);
+  --grey-blue: hsl(201, 11%, 66%);
+  --title-opacity: 0.7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+/* Header Section */
+.header {
+  background-image: url("/images/bg-header-desktop.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+.header img {
+  width: 100px;
+  height: 100px;
+  animation: slide-in-top 2s ease-in;
+}
+.header h1,
+.section6 h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+
+  color: var(--dark-grey-blue);
+}
+.header-content {
+  width: 50%;
+  animation: slide-in-top 2s ease-in;
+}
+p {
+  color: var(--grey-blue);
+}
+.header-buttons {
+  animation: slide-in-top 2s ease-in;
+}
+.header-buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 1px 3px 5px -2px rgba(100, 100, 100, 0.75);
+  color: white;
+}
+.header-buttons button:first-child {
+  background-color: var(--strong-cyan);
+}
+.header-buttons button:nth-child(2) {
+  background-color: var(--light-blue);
+}
+.header-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Info Section */
+.info-section {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+}
+.info-section h2 {
+  margin-bottom: 10px;
+  opacity: var(--title-opacity);
+}
+
+/* Feature Section */
+.section2 {
+  height: 100vh;
+}
+.features {
+  display: flex;
+  justify-content: space-around;
+}
+.features img {
+  width: 40%;
+  height: 40%;
+}
+.features-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.features-content-item {
+  width: 70%;
+}
+h3 {
+  opacity: var(--title-opacity);
+  opacity: 0.7;
+}
+p {
+  color: var(--grey-blue);
+}
+
+/* Section 3 */
+.section3 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.section3 img {
+  width: 50%;
+  height: 50%;
+}
+
+/* Section4 - Services */
+.section4 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+.section4 .service {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.section4 .service img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* Section 4 - Clients */
+.section5 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.section5 img {
+  width: 170px;
+  height: 50px;
+  transition: transform 0.5s ease-in;
+}
+
+.section5 img:hover {
+  transform: scale(0.9);
+}
+
+/* Section 6*/
+.section6 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 80px;
+  align-items: center;
+  margin-top: 100px;
+  background-color: hsla(204, 16%, 94%, 0.888);
+}
+.footer-image {
+}
+.footer-image img {
+  width: 60px;
+  height: 60px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 100px;
+}
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* ----------------------------------------------
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* media query */
+@media all and (max-width: 375px) {
+  .header {
+    height: fit-content;
+    margin-bottom: 100px;
+  }
+  .header h1,
+  .section6 h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .header-content {
+    width: 90%;
+  }
+  .info-section {
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  /* features */
+  .section2 {
+    height: fit-content;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .features img,
+  .features-content,
+  .features-content-item {
+    width: 90%;
+  }
+
+  .features-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Section 3 */
+  .section3 {
+    margin-top: 50px;
+  }
+  .section3 img {
+    width: 90%;
+  }
+
+  /* Section */
+  .section4,
+  .section5 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
